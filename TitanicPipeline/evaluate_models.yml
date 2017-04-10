@@ -1,0 +1,6 @@
+true_pos_reward: 2
+true_neg_reward: 1
+false_pos_penalty: -3
+false_neg_penalty: -1
+k: 50
+pics: True

@@ -1,0 +1,6 @@
+---
+models_to_run: KNN, LR, RF, AB, ET, GB
+prediction_var: survived
+feats_to_use: fare, sex, age, family_size, embarked_S, embarked_C, first_class, second_class, parch
+train_table_name: train_table.csv
+test_table_name: test_table.csv

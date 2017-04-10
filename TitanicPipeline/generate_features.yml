@@ -1,0 +1,21 @@
+---
+name: family_size
+deps: parch, sibsp
+incl: True
+---
+name: embarked_S
+deps: embarked
+incl: True
+---
+name: embarked_C
+deps: embarked
+incl: True
+---
+name: first_class
+deps: pclass
+incl: True
+---
+name: second_class
+deps: pclass
+incl: True
+
