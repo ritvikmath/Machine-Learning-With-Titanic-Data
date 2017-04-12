@@ -117,11 +117,16 @@ else:
 
 #############EVALUATE MODELS TASK#############
 
-if (proceed == True) or (not os.path.isfile('./model_metrics.csv')) or (os.path.getmtime('./evaluate_models.yml') > os.path.getmtime('./model_metrics.csv')):
+if (proceed == True) or (not os.path.isfile('./model_scores.csv')) or (os.path.getmtime('./evaluate_models.yml') > os.path.getmtime('./model_scores.csv')):
 	print "---------------"
 	print "Evaluating Models"
 	print "---------------"
 	s = datetime.datetime.now()
+	for fn in os.listdir('./model_output/'):
+		if fn != 'tracker.s':
+			os.utime('./model_output/'+fn, None)
+	if os.path.isfile('./model_scores.csv'):
+		os.remove('./model_scores.csv')
 	evaluate_models.evaluate_models()
 	tasktimes['Evaluate Models'] = (datetime.datetime.now() - s).total_seconds()
 else:
