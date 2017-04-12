@@ -1,1 +1,3 @@
-# LA-Hacks-2017-ML
+# Machine Learning with Titanic Data
+
+
